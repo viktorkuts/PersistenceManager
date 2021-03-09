@@ -1,6 +1,6 @@
 console.log("I am running")
-const pm = require('../moduleRouter');
+const pm = require('..');
 const Client = new pm.Manager("bruhmoments");
-Client.addElement(null,[5,10,20]);
-
-console.log(Client)
+setTimeout(() => {
+	Client.addElement("bruh","bruhvalue");
+},1000);

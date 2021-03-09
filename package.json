@@ -1,10 +1,10 @@
 {
   "name": "persistencemanager",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A persistence npm library that allows you to store data with a plain textfile.",
   "main": "moduleRouter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/testing.js"
   },
   "repository": {
     "type": "git",

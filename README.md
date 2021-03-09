@@ -1,5 +1,8 @@
 # PersistenceManager
-A persistence npm library that allows you to store data with a plain textfile.
+A data storing library that lets you to store data in a JSON file.
+
+PeristenceManager was created to store data on one JSON file, called a persistence. It was designed to only use the native node.js dependecies. Inside the persistence are stored the container objects, which contain the saved data. Each container contains a metadata object and a data array.
+
 
 # Example
 
@@ -19,8 +22,9 @@ PersistenceContainer.removePersistence("TempSave");
 console.log(PersistenceContainer); // undefined
 ```
 
+# Documentation  
 
-# Usage  
+## Manager
 
 ```js
 new PersistenceLib.Manager(SaveName,InitData):class Manager
@@ -32,7 +36,12 @@ Creates a new Persistance Manager which is used to handle the storing and retrie
   - SaveName\[string\]: The name used for the storage file.
   - InitData\[any\]: \[Optional\] The data the storage will begin with.
 
+#### Returns
+Return Type: Container Array
+
 ## Methods :  
+
+## addElement
 ```js
 .addElement(Key,...Elements):array Container
 ```  
@@ -42,9 +51,13 @@ Adds elements to the save file and container. Returns the data array.
 #### Passed Arguments:  
   - Key\[string or null\]: The key that will be used to index the elements. If null, elements will be pushed in the array.  
   - Elements\[...any\]: The elements to be inserted into the array.  
-    
+## removeContainer
 ```js
-.removePersistence():void
+.removeContainer():void
 ```
 #### Description:  
-Removes entirely the save file and destroys the Manager.
+Removes entirely the container and destroys the Manager.
+
+#### Returns
+Return Type: Container Array  
+Summary: Returns the deleted container.

@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # PersistenceManager Data Files
-persistence_*.json
+persistence*.json
